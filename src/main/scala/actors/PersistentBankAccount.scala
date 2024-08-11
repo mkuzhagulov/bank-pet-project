@@ -7,7 +7,7 @@ import akka.persistence.typed.scaladsl.{Effect, EventSourcedBehavior}
 import scala.util.{Failure, Success, Try}
 
 // a single bank account
-class PersistentBankAccount {
+object PersistentBankAccount {
 
   /*
     - fault tolerance
@@ -26,12 +26,9 @@ class PersistentBankAccount {
 
   // events
   trait Event
-  object Event {
-    case class BankAccountCreated(bankAccount: BankAccount) extends Event
-    case class BalanceUpdated(amount: Double) extends Event
-  }
+  case class BankAccountCreated(bankAccount: BankAccount) extends Event
+  case class BalanceUpdated(amount: Double) extends Event
 
-  import Event._
 
   // state
   case class BankAccount(id: String, user: String, currency: String, balance: Double)
