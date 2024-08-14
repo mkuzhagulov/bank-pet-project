@@ -1,6 +1,6 @@
-package actors
+package bank.actors
 
-import actors.PersistentBankAccount.Response.{BankAccountBalanceUpdatedResponse, GetBankAccountResponse}
+import PersistentBankAccount.Response.{BankAccountBalanceUpdatedResponse, GetBankAccountResponse}
 import akka.actor.typed.scaladsl.{ActorContext, Behaviors}
 import akka.actor.typed.{ActorRef, Behavior}
 import akka.persistence.typed.PersistenceId

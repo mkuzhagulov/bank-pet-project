@@ -1,4 +1,4 @@
-package actors
+package bank.actors
 
 import akka.actor.typed.{ActorRef, Behavior}
 import akka.persistence.typed.PersistenceId

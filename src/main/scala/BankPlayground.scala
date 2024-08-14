@@ -1,12 +1,11 @@
-import actors.Bank
-import actors.PersistentBankAccount.Command._
-import actors.PersistentBankAccount.Response._
-import actors.PersistentBankAccount.Response
+import bank.actors.PersistentBankAccount.Response
 import akka.NotUsed
 import akka.actor.typed.{ActorSystem, Behavior, Scheduler}
 import akka.actor.typed.scaladsl.Behaviors
 import akka.actor.typed.scaladsl.AskPattern._
 import akka.util.Timeout
+import bank.actors.Bank
+import bank.actors.PersistentBankAccount.Response._
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._
